@@ -31,8 +31,7 @@ Random Forest
 
 Gradient Boosting
 
-4.
-5.  Results
+4. Results
 
 Compared models on accuracy and performance metrics
 
