@@ -1,9 +1,10 @@
-Project Overview
+Loan Approval Prediction using Machine Learning & Explainable AI
+1. Project Overview
 
-This project predicts loan approval using various applicant financial and demographic features.
-The goal is to build a machine learning model that is both accurate and explainable, especially because loan decisions affect real people and require fairness and transparency.
+This project predicts loan approval using applicant financial and demographic features.
+The objective is to build a machine learning model that is both accurate and explainable, ensuring fairness and transparency in loan decisions.
 
-The project includes:
+This project includes:
 
 End-to-end data preprocessing
 
@@ -13,13 +14,13 @@ Multiple machine learning models
 
 Explainable AI (XAI) using SHAP and PDP
 
-Model evaluation & comparison
+Model evaluation and comparison
 
-Insights aligned with real-world financial logic
+Insights aligned with real-world loan-risk logic
 
-📂 Dataset Description
+2. Dataset Description
 
-The dataset contains information such as:
+The dataset contains the following features:
 
 CIBIL score
 
@@ -37,25 +38,25 @@ Self-employed status
 
 Number of dependents
 
-Target: Loan Status (Approved / Not Approved)
+Target variable: Loan Status (Approved / Not Approved)
 
-A sample of the dataset is shown using df.head() inside the notebook.
+A dataset preview (df.head()) is shown inside the notebook.
 
-🔍 Exploratory Data Analysis
+3. Exploratory Data Analysis
 
 The EDA process includes:
 
 Missing value analysis
 
-Duplicate checks
+Duplicate value checks
 
-Feature datatype inspection
+Data type inspection
 
 Outlier detection using Z-Score
 
-Distribution plots (histograms, KDE)
+Histograms and KDE plots for distributions
 
-Count plots for categorical variables
+Count plots for categorical features
 
 Boxplots for financial variables
 
@@ -63,25 +64,27 @@ Correlation heatmap (including target variable)
 
 Target distribution analysis
 
-Univariate & bivariate analysis
+Univariate and bivariate exploration
 
-Outlier treatment for financial fields
+Outlier treatment for financial columns
 
-⚙️ Data Preprocessing
+4. Data Preprocessing
 
-Encoding categorical features
+The preprocessing pipeline includes:
+
+Encoding categorical variables
 
 Handling missing values
 
-Scaling numerical variables
+Scaling numerical features
 
 Balancing the dataset using SMOTE
 
 Splitting data into training and testing sets
 
-🤖 Machine Learning Models Used
+5. Machine Learning Models Used
 
-The following ML models were trained and compared:
+The following models were trained and compared:
 
 Logistic Regression
 
@@ -89,19 +92,19 @@ Decision Tree Classifier
 
 Random Forest Classifier
 
-Gradient Boosting
+Gradient Boosting Classifier
 
-AdaBoost
+AdaBoost Classifier
 
 K-Nearest Neighbors (KNN)
 
 Bagging Classifier (Random Forest as base estimator)
 
-After evaluation, Random Forest performed the best and was selected as the final model.
+After evaluation, the Random Forest Classifier performed the best and was selected as the final model.
 
-📊 Model Evaluation
+6. Model Evaluation
 
-Evaluation metrics include:
+The models were evaluated using the following metrics:
 
 Accuracy
 
@@ -113,55 +116,49 @@ F1-Score
 
 ROC–AUC
 
-Confusion Matrix
+7. Explainable AI (XAI)
+7.1. Permutation Importance
 
-Screenshots of these metrics are provided in the Medium blog.
+Identifies the features the model relies on the most.
 
-🧠 Explainable AI (XAI)
+CIBIL Score, Loan Term, and Loan Amount were observed as the strongest predictors.
 
-To make the model interpretable and transparent, the following XAI techniques were used:
+7.2. SHAP Summary Plot
 
-🔸 Permutation Importance
+Shows how much each feature contributes to the prediction.
 
-Shows which features the model relied on the most
+High CIBIL values push predictions toward approval.
 
-CIBIL Score, Loan Term, and Loan Amount were the strongest predictors
+Low CIBIL values push predictions toward rejection.
 
-🔸 SHAP Summary Plot
+Short loan terms increase approval probability.
 
-Visualizes the impact of each feature on the prediction
+High loan amounts reduce approval probability.
 
-High CIBIL (pink) pushes decisions toward approval
+7.3. Partial Dependence Plot (PDP)
 
-Low CIBIL (blue) pushes toward rejection
+Shows how the model output changes with variations in a single feature.
 
-Short loan terms → higher approval probability
+CIBIL PDP displays a sharp transition from rejection to approval as the score increases.
 
-Large loan amounts → lower approval probability
+Loan Term PDP shows decreasing approval probability with longer terms.
 
-🔸 Partial Dependence Plot (PDP)
+These XAI insights match real-world banking logic, adding transparency and interpretability.
 
-Shows how prediction changes with variations in a single feature
+8. Key Insights
 
-CIBIL Score PDP showed a sharp jump from rejection → approval
+CIBIL Score is the strongest factor affecting loan approval.
 
-Loan Term PDP showed approval decreases as term gets longer
+Shorter loan terms lead to higher approval probability.
 
-These insights align with industry loan-risk logic and add transparency.
+Higher loan amounts decrease approval chances.
 
-💡 Key Insights
+Income contributes moderately to loan decisions.
 
-CIBIL Score is the top factor influencing loan approval.
+Asset-related features have limited influence on approval.
 
-Short loan terms significantly increase approval probability.
+XAI validates that the model’s behavior aligns with common loan policies.
 
-Very high loan amounts reduce approval chances.
-
-Income has a moderate effect.
-
-Most asset-related features have minimal influence.
-
-XAI confirmed that the model's behavior matches real-world banking rules.
 
 
 
