@@ -1,24 +1,16 @@
 LOAN APPROVAL PREDICTION USING ML AND XAI
 
-This project predicts loan approval using financial and demographic features.
+This project builds a machine learning–based system to predict loan approval using financial and demographic data.
 
-EDA covers missing values, outliers, distributions, and correlations.
+Multiple ML models were evaluated, with Random Forest achieving the best performance across standard metrics.
 
-Preprocessing includes encoding, scaling, and balancing.
+Explainable AI techniques (SHAP, PDP, and Permutation Importance) were applied to interpret model decisions.
 
-Seven ML models were trained and compared.
+Key factors such as CIBIL score, loan term, and loan amount were identified, aligning with real-world lending logic.
 
-Random Forest achieved the best overall performance.
+Project Demo Video
 
-Evaluation used accuracy, precision, recall, F1-score, and ROC–AUC.
-
-XAI methods (SHAP, PDP, Permutation Importance) explain model decisions.
-
-CIBIL Score, Loan Term, and Loan Amount emerged as key predictors.
-
-Insights align with real loan-approval logic.
-
-The notebook includes full workflow, evaluation, and visual explanations.
+A detailed explanation of the project workflow, model evaluation, and XAI results is available here:[https://drive.google.com/file/d/1PN4kbIhs64Izk6e5_5gkQTuORj6dUNlE/view?usp=drive_link]
 
 
 
